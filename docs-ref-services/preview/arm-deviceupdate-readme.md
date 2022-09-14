@@ -3,21 +3,21 @@ title: Azure DeviceUpdate client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/arm-deviceupdate, deviceupdate
 author: xirzec
 ms.author: jeffish
-ms.date: 07/14/2022
+ms.date: 09/14/2022
 ms.topic: reference
 ms.devlang: javascript
 ms.service: deviceupdate
 ---
-# Azure DeviceUpdate client library for JavaScript - version 1.0.0-beta.2 
+# Azure DeviceUpdate client library for JavaScript - version 1.0.1-alpha.20220908.1 
 
 
 This package contains an isomorphic SDK (runs both in Node.js and in browsers) for Azure DeviceUpdate client.
 
 Microsoft Device Update resource provider.
 
-[Source code](https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-deviceupdate_1.0.0-beta.2/sdk/deviceupdate/arm-deviceupdate) |
+[Source code](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/deviceupdate/arm-deviceupdate) |
 [Package (NPM)](https://www.npmjs.com/package/@azure/arm-deviceupdate) |
-[API reference documentation](/javascript/api/@azure/arm-deviceupdate?view=azure-node-preview) |
+[API reference documentation](/javascript/api/@azure/arm-deviceupdate) |
 [Samples](https://github.com/Azure-Samples/azure-samples-js-management)
 
 ## Getting started
@@ -27,7 +27,7 @@ Microsoft Device Update resource provider.
 - [LTS versions of Node.js](https://nodejs.org/about/releases/)
 - Latest versions of Safari, Chrome, Edge and Firefox.
 
-See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/@azure/arm-deviceupdate_1.0.0-beta.2/SUPPORT.md) for more details.
+See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/main/SUPPORT.md) for more details.
 
 ### Prerequisites
 
@@ -46,7 +46,7 @@ npm install @azure/arm-deviceupdate
 To create a client object to access the Azure DeviceUpdate API, you will need the `endpoint` of your Azure DeviceUpdate resource and a `credential`. The Azure DeviceUpdate client can use Azure Active Directory credentials to authenticate.
 You can find the endpoint for your Azure DeviceUpdate resource in the [Azure Portal][azure_portal].
 
-You can authenticate with Azure Active Directory using a credential from the [@azure/identity][azure_identity] library or [an existing AAD Token](https://github.com/Azure/azure-sdk-for-js/blob/@azure/arm-deviceupdate_1.0.0-beta.2/sdk/identity/identity/samples/AzureIdentityExamples.md#authenticating-with-a-pre-fetched-access-token).
+You can authenticate with Azure Active Directory using a credential from the [@azure/identity][azure_identity] library or [an existing AAD Token](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/identity/identity/samples/AzureIdentityExamples.md#authenticating-with-a-pre-fetched-access-token).
 
 To use the [DefaultAzureCredential][defaultazurecredential] provider shown below, or other credential providers provided with the Azure SDK, please install the `@azure/identity` package:
 
@@ -96,7 +96,7 @@ const { setLogLevel } = require("@azure/logger");
 setLogLevel("info");
 ```
 
-For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-deviceupdate_1.0.0-beta.2/sdk/core/logger).
+For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/core/logger).
 
 ## Next steps
 
@@ -104,7 +104,7 @@ Please take a look at the [samples](https://github.com/Azure-Samples/azure-sampl
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/arm-deviceupdate_1.0.0-beta.2/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ## Related projects
 
@@ -116,6 +116,6 @@ If you'd like to contribute to this library, please read the [contributing guide
 [azure_sub]: https://azure.microsoft.com/free/
 [azure_sub]: https://azure.microsoft.com/free/
 [azure_portal]: https://portal.azure.com
-[azure_identity]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-deviceupdate_1.0.0-beta.2/sdk/identity/identity
-[defaultazurecredential]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-deviceupdate_1.0.0-beta.2/sdk/identity/identity#defaultazurecredential
+[azure_identity]: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/identity/identity
+[defaultazurecredential]: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/identity/identity#defaultazurecredential
 
