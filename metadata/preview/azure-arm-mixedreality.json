@@ -1,0 +1,14 @@
+{
+  "Name": "@azure/arm-mixedreality",
+  "Version": "4.1.0-alpha.20220908.1",
+  "DevVersion": "4.1.0-alpha.20220914.1",
+  "DirectoryPath": "sdk/mixedreality/arm-mixedreality",
+  "ServiceDirectory": "mixedreality",
+  "ReadMePath": "sdk/mixedreality/arm-mixedreality/README.md",
+  "ChangeLogPath": "sdk/mixedreality/arm-mixedreality/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "mgmt",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-arm-mixedreality",
+  "ReleaseStatus": "2022-04-25"
+}
