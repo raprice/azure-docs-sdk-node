@@ -1,7 +1,7 @@
 {
   "Name": "@azure/arm-storage",
-  "Version": "17.0.0-beta.1",
-  "DevVersion": null,
+  "Version": "18.0.1-alpha.20220908.1",
+  "DevVersion": "18.0.1-alpha.20220914.1",
   "DirectoryPath": "sdk/storage/arm-storage",
   "ServiceDirectory": "storage",
   "ReadMePath": "sdk/storage/arm-storage/README.md",
@@ -10,5 +10,5 @@
   "SdkType": "mgmt",
   "IsNewSdk": true,
   "ArtifactName": "azure-arm-storage",
-  "ReleaseStatus": "2021-10-09"
+  "ReleaseStatus": "Unreleased"
 }
