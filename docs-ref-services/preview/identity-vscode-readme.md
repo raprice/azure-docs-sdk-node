@@ -1,27 +1,24 @@
 ---
 title: 
 keywords: Azure, javascript, SDK, API, @azure/identity-vscode, identity
-author: ramya-rao-a
-ms.author: ramyar
-ms.date: 09/10/2021
+author: KarishmaGhiya
+ms.author: kaghiya
+ms.date: 09/14/2022
 ms.topic: reference
-ms.prod: azure
-ms.technology: azure
 ms.devlang: javascript
 ms.service: identity
 ---
-
-## Azure Identity Plugin for Visual Studio Code Authentication
+# Azure Identity Plugin for Visual Studio Code Authentication
 
 This package provides a plugin to the Azure Identity library for JavaScript ([`@azure/identity`](https://npmjs.com/package/@azure/identity)) that enables authentication through the "Azure Account" extension for Visual Studio Code. This plugin provides the dependencies of the `VisualStudioCodeCredential` in `@azure/identity` and enables it for use on its own or as part of `DefaultAzureCredential`.
 
-[Source code](https://github.com/Azure/azure-sdk-for-js/tree/@azure/identity-vscode_1.0.0-beta.2/sdk/identity/identity-vscode) | [Samples](https://github.com/Azure/azure-sdk-for-js/blob/@azure/identity-vscode_1.0.0-beta.2/sdk/identity/identity-vscode/samples-dev)
+[Source code](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/identity/identity-vscode) | [Samples](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/identity/identity-vscode/samples-dev)
 
 ## Getting started
 
 ```javascript
-import { useIdentityPlugin } from "@azure/identity";
-import { vsCodePlugin } from "@azure/identity-vscode";
+const { useIdentityPlugin } = require("@azure/identity");
+const { vsCodePlugin } = require("@azure/identity-vscode");
 
 useIdentityPlugin(vsCodePlugin);
 ```
@@ -46,15 +43,15 @@ Azure Identity plugins for JavaScript support stable (even numbered) versions of
 
 ## Key concepts
 
-If this is your first time using `@azure/identity` or the Microsoft identity platform (Azure Active Directory), we recommend that you read [Using `@azure/identity` with Microsoft Identity Platform](https://github.com/Azure/azure-sdk-for-js/blob/@azure/identity-vscode_1.0.0-beta.2/documentation/using-azure-identity.md) first. This document will give you a deeper understanding of the platform and how to configure your Azure account correctly.
+If this is your first time using `@azure/identity` or the Microsoft identity platform (Azure Active Directory), we recommend that you read [Using `@azure/identity` with Microsoft Identity Platform](https://github.com/Azure/azure-sdk-for-js/blob/main/documentation/using-azure-identity.md) first. This document will give you a deeper understanding of the platform and how to configure your Azure account correctly.
 
 ### Azure Identity Plugins
 
 As of `@azure/identity` version 2.0.0, the Identity client library for JavaScript includes a plugin API. This package (`@azure/identity-vscode`) exports a plugin object that you must pass as an argument to the top-level `useIdentityPlugin` function from the `@azure/identity` package. Enable authentication through the "Azure Account" extension for Visual Studio Code as follows:
 
 ```javascript
-import { useIdentityPlugin } from "@azure/identity";
-import { vsCodePlugin } from "@azure/identity-vscode";
+const { useIdentityPlugin } = require("@azure/identity");
+const { vsCodePlugin } = require("@azure/identity-vscode");
 
 useIdentityPlugin(vsCodePlugin);
 ```
@@ -72,8 +69,8 @@ After signing in, you may need to select a subscription (for example, if you hav
 Once the plugin is registered, you can use `VisualStudioCodeCredential` in a similar fashion to the other credential classes in `@azure/identity`:
 
 ```javascript
-import { useIdentityPlugin, VisualStudioCodeCredential } from "@azure/identity";
-import { vsCodePlugin } from "@azure/identity-vscode";
+const { useIdentityPlugin, VisualStudioCodeCredential } = require("@azure/identity");
+const { vsCodePlugin } = require("@azure/identity-vscode");
 
 useIdentityPlugin(vsCodePlugin);
 
@@ -96,8 +93,8 @@ main().catch((error) => {
 You can also use `DefaultAzureCredential`, which will attempt to authenticate using the "Azure Account" extension for Visual Studio Code if it's available:
 
 ```javascript
-import { useIdentityPlugin, DefaultAzureCredential } from "@azure/identity";
-import { vsCodePlugin } from "@azure/identity-vscode";
+const { useIdentityPlugin, DefaultAzureCredential } = require("@azure/identity");
+const { vsCodePlugin } = require("@azure/identity-vscode");
 
 useIdentityPlugin(vsCodePlugin);
 
@@ -125,7 +122,7 @@ main().catch((error) => {
 Enabling logging may help uncover useful information about failures. In order to see a log of HTTP requests and responses, set the `AZURE_LOG_LEVEL` environment variable to `info`. Alternatively, logging can be enabled at runtime by calling `setLogLevel` in the `@azure/logger`:
 
 ```javascript
-import { setLogLevel } from "@azure/logger";
+const { setLogLevel } = require("@azure/logger");
 
 setLogLevel("info");
 ```
@@ -138,7 +135,7 @@ If you encounter bugs or have suggestions, please [open an issue](https://github
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/identity-vscode_1.0.0-beta.2/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 [azaccountext]: https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account
 
