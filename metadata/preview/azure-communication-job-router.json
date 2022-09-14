@@ -1,0 +1,14 @@
+{
+  "Name": "@azure/communication-job-router",
+  "Version": "1.0.0-alpha.20220901.1",
+  "DevVersion": "1.0.0-alpha.20220914.1",
+  "DirectoryPath": "sdk/communication/communication-job-router",
+  "ServiceDirectory": "communication",
+  "ReadMePath": "sdk/communication/communication-job-router/README.md",
+  "ChangeLogPath": "sdk/communication/communication-job-router/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "client",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-communication-job-router",
+  "ReleaseStatus": "Unreleased"
+}
