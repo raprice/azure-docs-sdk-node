@@ -1,6 +1,6 @@
 ---
 title: Azure ResourceManagement client library for JavaScript
-keywords: Azure, javascript, SDK, API, @azure/arm-resources, resources
+keywords: Azure, javascript, SDK, API, @azure/arm-resources-profile-2020-09-01-hybrid, resources
 author: qiaozha
 ms.author: qiaozha
 ms.date: 09/15/2022
@@ -8,16 +8,16 @@ ms.topic: reference
 ms.devlang: javascript
 ms.service: resources
 ---
-# Azure ResourceManagement client library for JavaScript - version 5.0.2-alpha.20220908.1 
+# Azure ResourceManagement client library for JavaScript - version 2.0.1-alpha.20220908.1 
 
 
 This package contains an isomorphic SDK (runs both in Node.js and in browsers) for Azure ResourceManagement client.
 
 Provides operations for working with resources and resource groups.
 
-[Source code](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/resources/arm-resources) |
-[Package (NPM)](https://www.npmjs.com/package/@azure/arm-resources) |
-[API reference documentation](/javascript/api/@azure/arm-resources) |
+[Source code](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/resources/arm-resources-profile-2020-09-01-hybrid) |
+[Package (NPM)](https://www.npmjs.com/package/@azure/arm-resources-profile-2020-09-01-hybrid) |
+[API reference documentation](/javascript/api/@azure/arm-resources-profile-2020-09-01-hybrid) |
 [Samples](https://github.com/Azure-Samples/azure-samples-js-management)
 
 ## Getting started
@@ -33,12 +33,12 @@ See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/main/SUP
 
 - An [Azure subscription][azure_sub].
 
-### Install the `@azure/arm-resources` package
+### Install the `@azure/arm-resources-profile-2020-09-01-hybrid` package
 
 Install the Azure ResourceManagement client library for JavaScript with `npm`:
 
 ```bash
-npm install @azure/arm-resources
+npm install @azure/arm-resources-profile-2020-09-01-hybrid
 ```
 
 ### Create and authenticate a `ResourceManagementClient`
@@ -60,7 +60,7 @@ Set the values of the client ID, tenant ID, and client secret of the AAD applica
 For more information about how to create an Azure AD Application check out [this guide](/azure/active-directory/develop/howto-create-service-principal-portal).
 
 ```javascript
-const { ResourceManagementClient } = require("@azure/arm-resources");
+const { ResourceManagementClient } = require("@azure/arm-resources-profile-2020-09-01-hybrid");
 const { DefaultAzureCredential } = require("@azure/identity");
 // For client-side applications running in the browser, use InteractiveBrowserCredential instead of DefaultAzureCredential. See https://aka.ms/azsdk/js/identity/examples for more details.
 
@@ -110,7 +110,7 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 - [Microsoft Azure SDK for JavaScript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fresources%2Farm-resources%2FREADME.png)
+![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fresources%2Farm-resources-profile-2020-09-01-hybrid%2FREADME.png)
 
 [azure_cli]: /cli/azure
 [azure_sub]: https://azure.microsoft.com/free/
