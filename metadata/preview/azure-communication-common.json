@@ -1,0 +1,14 @@
+{
+  "Name": "@azure/communication-common",
+  "Version": "2.1.1-alpha.20220815.1",
+  "DevVersion": "2.1.1-alpha.20220915.1",
+  "DirectoryPath": "sdk/communication/communication-common",
+  "ServiceDirectory": "communication",
+  "ReadMePath": "sdk/communication/communication-common/README.md",
+  "ChangeLogPath": "sdk/communication/communication-common/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "client",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-communication-common",
+  "ReleaseStatus": "Unreleased"
+}
