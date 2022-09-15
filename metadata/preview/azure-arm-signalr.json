@@ -1,0 +1,14 @@
+{
+  "Name": "@azure/arm-signalr",
+  "Version": "5.1.1-alpha.20220908.1",
+  "DevVersion": "5.1.1-alpha.20220915.1",
+  "DirectoryPath": "sdk/signalr/arm-signalr",
+  "ServiceDirectory": "signalr",
+  "ReadMePath": "sdk/signalr/arm-signalr/README.md",
+  "ChangeLogPath": "sdk/signalr/arm-signalr/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "mgmt",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-arm-signalr",
+  "ReleaseStatus": "Unreleased"
+}
