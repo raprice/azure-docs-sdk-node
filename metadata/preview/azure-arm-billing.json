@@ -1,0 +1,14 @@
+{
+  "Name": "@azure/arm-billing",
+  "Version": "4.0.2-alpha.20220908.1",
+  "DevVersion": "4.0.2-alpha.20220914.1",
+  "DirectoryPath": "sdk/billing/arm-billing",
+  "ServiceDirectory": "billing",
+  "ReadMePath": "sdk/billing/arm-billing/README.md",
+  "ChangeLogPath": "sdk/billing/arm-billing/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "mgmt",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-arm-billing",
+  "ReleaseStatus": "Unreleased"
+}
