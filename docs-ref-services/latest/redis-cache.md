@@ -1,11 +1,11 @@
 ---
-ms.service: cache
-author: xirzec
-ms.data: 09/13/2022
-ms.devlang: javascript
-description: Reference for Azure Redis Cache SDK for JavaScript
-ms.topic: reference
 ms.author: jeffish
+ms.devlang: javascript
+author: xirzec
+ms.data: 09/14/2022
+description: Reference for Azure Redis Cache SDK for JavaScript
+ms.service: cache
+ms.topic: reference
 title: Azure Redis Cache SDK for JavaScript
 ms.date: 06/15/2022
 ---
