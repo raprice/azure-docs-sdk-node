@@ -1,0 +1,14 @@
+{
+  "Name": "@azure-rest/agrifood-farming",
+  "Version": "1.0.0-alpha.20220805.1",
+  "DevVersion": "1.0.0-alpha.20220915.1",
+  "DirectoryPath": "sdk/agrifood/agrifood-farming-rest",
+  "ServiceDirectory": "agrifood",
+  "ReadMePath": "sdk/agrifood/agrifood-farming-rest/README.md",
+  "ChangeLogPath": "sdk/agrifood/agrifood-farming-rest/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "client",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-rest-agrifood-farming",
+  "ReleaseStatus": "Unreleased"
+}
