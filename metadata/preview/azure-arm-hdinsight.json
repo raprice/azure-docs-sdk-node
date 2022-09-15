@@ -1,0 +1,14 @@
+{
+  "Name": "@azure/arm-hdinsight",
+  "Version": "1.2.1-alpha.20220908.1",
+  "DevVersion": "1.2.1-alpha.20220915.1",
+  "DirectoryPath": "sdk/hdinsight/arm-hdinsight",
+  "ServiceDirectory": "hdinsight",
+  "ReadMePath": "sdk/hdinsight/arm-hdinsight/README.md",
+  "ChangeLogPath": "sdk/hdinsight/arm-hdinsight/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "mgmt",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-arm-hdinsight",
+  "ReleaseStatus": "Unreleased"
+}
