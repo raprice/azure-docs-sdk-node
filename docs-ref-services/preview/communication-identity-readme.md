@@ -3,14 +3,12 @@ title: Azure Communication Identity client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/communication-identity, communication
 author: petrsvihlik
 ms.author: petrsvihlik
-ms.date: 04/05/2022
+ms.date: 09/16/2022
 ms.topic: reference
-ms.prod: azure
-ms.technology: azure
 ms.devlang: javascript
 ms.service: communication
 ---
-# Azure Communication Identity client library for JavaScript - version 1.1.0-beta.2 
+# Azure Communication Identity client library for JavaScript - version 1.1.1-alpha.20220822.1 
 
 
 The identity library is used for managing users and tokens for Azure Communication Services.
@@ -20,7 +18,7 @@ The identity library is used for managing users and tokens for Azure Communicati
 ### Prerequisites
 
 - An [Azure subscription][azure_sub].
-- An existing Communication Services resource. If you need to create the resource, you can use the [Azure Portal][azure_portal], the[Azure PowerShell][azure_powershell], or the [Azure CLI][azure_cli].
+- An existing Communication Services resource. If you need to create the resource, you can use the [Azure Portal][azure_portal], the [Azure PowerShell][azure_powershell], or the [Azure CLI][azure_cli].
 
 ### Installing
 
@@ -136,12 +134,16 @@ Use the `deleteUser` method to delete a user.
 await client.deleteUser(user);
 ```
 
-### Exchanging AAD access token of a Teams User for a Communication access token
+### Exchanging Azure AD access token of a Teams User for a Communication access token
 
-Use `getTokenForTeamsUser` method to exchange an AAD access token of a Teams user for a new `CommunicationAccessToken` with a matching expiration time.
+Use `getTokenForTeamsUser` method to exchange an Azure AD access token of a Teams user for a new `CommunicationAccessToken` with a matching expiration time.
 
 ```typescript
-await client.getTokenForTeamsUser('<aad-access-token-of-a-teams-user>');
+await client.getTokenForTeamsUser({
+  teamsUserAadToken: "<aad-access-token-of-a-teams-user>",
+  clientId: "<cliend-id-of-an-aad-application>",
+  userObjectId: "<aad-object-id-of-a-teams-user>",
+});
 ```
 
 ## Troubleshooting
@@ -149,21 +151,21 @@ await client.getTokenForTeamsUser('<aad-access-token-of-a-teams-user>');
 ## Next steps
 
 Please take a look at the
-[samples](https://github.com/Azure/azure-sdk-for-js/blob/@azure/communication-identity_1.1.0-beta.2/sdk/communication/communication-identity/samples)
+[samples](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/communication/communication-identity/samples)
 directory for detailed examples on how to use this library.
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/communication-identity_1.1.0-beta.2/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ## Related projects
 
 - [Microsoft Azure SDK for Javascript](https://github.com/Azure/azure-sdk-for-js)
 
-[azure_cli]: https://docs.microsoft.com/cli/azure
+[azure_cli]: /cli/azure
 [azure_sub]: https://azure.microsoft.com/free/
 [azure_portal]: https://portal.azure.com
-[azure_powershell]: https://docs.microsoft.com/powershell/module/az.communication/new-azcommunicationservice
+[azure_powershell]: /powershell/module/az.communication/new-azcommunicationservice
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fcommunication%2Fcommunication-identity%2FREADME.png)
 

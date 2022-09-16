@@ -3,12 +3,12 @@ title: Azure Communication Email client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/communication-email, communication
 author: petrsvihlik
 ms.author: petrsvihlik
-ms.date: 05/24/2022
+ms.date: 09/16/2022
 ms.topic: reference
 ms.devlang: javascript
 ms.service: communication
 ---
-# Azure Communication Email client library for JavaScript - version 1.0.0-beta.1 
+# Azure Communication Email client library for JavaScript - version 1.0.0-alpha.20220912.1 
 
 
 This package contains a JavaScript/TypeScript SDK for Azure Communication Services for Email.
@@ -27,33 +27,27 @@ To create these resource, you can use the [Azure Portal][communication_resource_
 npm install @azure/communication-email
 ```
 
-### Browser support
-
-## Key concepts
+## Examples
 
 `EmailClient` provides the functionality to send email messages .
-
-## Examples
 
 ## Authentication
 
 Email clients can be authenticated using the connection string acquired from an Azure Communication Resource in the [Azure Portal][azure_portal].
 
-```typescript
-import { EmailClient } from "@azure/communication-email";
+```javascript
+const { EmailClient } = require("@azure/communication-email");
 
 const connectionString = `endpoint=https://<resource-name>.communication.azure.com/;accessKey=<Base64-Encoded-Key>`;
 const client = new EmailClient(connectionString);
 ```
 
-## Examples
-
 ### Send an Email Message
 
 To send an email message, call the `send` function from the `EmailClient`.
 
-```typescript Snippet:Azure_Communication_Email_Send
-const emailMessage: EmailMessage = {
+```javascript Snippet:Azure_Communication_Email_Send
+const emailMessage = {
   sender: "sender@contoso.com",
   content: {
     subject: "This is the subject",
@@ -76,8 +70,8 @@ const response = await emailClient.send(emailMessage);
 
 To send an email message to multiple recipients, add a object for each recipient type and an object for each recipient.
 
-```typescript Snippet:Azure_Communication_Email_Send_Multiple_Recipients
-const emailMessage: EmailMessage = {
+```javascript Snippet:Azure_Communication_Email_Send_Multiple_Recipients
+const emailMessage = {
   sender: "sender@contoso.com",
   content: {
     subject: "This is the subject",
@@ -94,7 +88,7 @@ const emailMessage: EmailMessage = {
         displayName: "Customer Name 2",
       },
     ],
-    cC: [
+    cc: [
       {
         email: "ccCustomer1@domain.com",
         displayName: " CC Customer 1",
@@ -104,7 +98,7 @@ const emailMessage: EmailMessage = {
         displayName: "CC Customer 2",
       },
     ],
-    bCC: [
+    bcc: [
       {
         email: "bccCustomer1@domain.com",
         displayName: " BCC Customer 1",
@@ -124,17 +118,17 @@ const response = await emailClient.send(emailMessage);
 
 Azure Communication Services support sending email with attachments.
 
-```typescript Snippet:Azure_Communication_Email_Send_With_Attachments
+```javascript Snippet:Azure_Communication_Email_Send_With_Attachments
 const filePath = "C://readme.txt";
 
-const emailMessage: EmailMessage = {
+const emailMessage = {
   sender: "sender@contoso.com",
   content: {
     subject: "This is the subject",
     plainText: "This is the body",
   },
   recipients: {
-    toRecipients: [
+    to: [
       {
         email: "customer@domain.com",
         displayName: "Customer Name",
@@ -157,10 +151,10 @@ const response = await emailClient.send(emailMessage);
 
 The result from the `send` call contains a `messageId` which can be used to query the status of the email.
 
-```typescript Snippet:Azure_Communication_Email_GetSendStatus
-const messageId = await emailClient.send(emailMessage);
+```javascript Snippet:Azure_Communication_Email_GetSendStatus
+const response = await emailClient.send(emailMessage);
 
-const status = await emailClient.getSendStatus(messageId);
+const status = await emailClient.getSendStatus(response.messageId);
 ```
 
 ## Next steps
