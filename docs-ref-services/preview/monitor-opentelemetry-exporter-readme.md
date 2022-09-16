@@ -3,12 +3,12 @@ title: Azure Monitor OpenTelemetry Exporter client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/monitor-opentelemetry-exporter, monitor
 author: hectorhdzg
 ms.author: hectorh
-ms.date: 07/08/2022
+ms.date: 09/16/2022
 ms.topic: reference
 ms.devlang: javascript
 ms.service: monitor
 ---
-# Azure Monitor OpenTelemetry Exporter client library for JavaScript - version 1.0.0-beta.8 
+# Azure Monitor OpenTelemetry Exporter client library for JavaScript - version 1.0.0-alpha.20220907.1 
 
 
 [![npm version](https://badge.fury.io/js/%40azure%2Fmonitor-opentelemetry-exporter.svg)](https://badge.fury.io/js/%40azure%2Fmonitor-opentelemetry-exporter)
@@ -26,7 +26,7 @@ This exporter package assumes your application is [already instrumented](https:/
 - [LTS versions of Node.js](https://nodejs.org/about/releases/)
 - Latest versions of Safari, Chrome, Edge, and Firefox.
 
-See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/@azure/monitor-opentelemetry-exporter_1.0.0-beta.8/SUPPORT.md) for more details.
+See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/main/SUPPORT.md) for more details.
 
 ### Prerequisites
 
@@ -70,7 +70,27 @@ provider.addSpanProcessor(
 
 ### Metrics
 
-Coming Soon
+Add the exporter to your existing OpenTelemetry tracer provider (`NodeTracerProvider` / `BasicTracerProvider`)
+
+```js
+const { MeterProvider, PeriodicExportingMetricReader } = require("@opentelemetry/sdk-metrics-base");
+const { Resource } = require("@opentelemetry/resources");
+const { SemanticResourceAttributes } = require("@opentelemetry/semantic-conventions");
+const { AzureMonitorMetricExporter } = require("@azure/monitor-opentelemetry-exporter");
+
+// Add the exporter into the MetricReader and register it with the MeterProvider
+const provider = new MeterProvider();
+const exporter = new AzureMonitorMetricExporter({
+  connectionString:
+    process.env["APPLICATIONINSIGHTS_CONNECTION_STRING"] || "<your connection string>",
+});
+const metricReaderOptions = {
+  exporter: exporter,
+};
+const metricReader = new PeriodicExportingMetricReader(metricReaderOptions);
+provider.addMetricReader(metricReader);
+);
+```
 
 ### Logs
 
@@ -78,7 +98,7 @@ Coming Soon
 
 ## Examples
 
-For complete samples of a few champion scenarios, see the [`samples/`](https://github.com/Azure/azure-sdk-for-js/tree/@azure/monitor-opentelemetry-exporter_1.0.0-beta.8/sdk/monitor/monitor-opentelemetry-exporter/samples/) folder.
+For complete samples of a few champion scenarios, see the [`samples/`](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/monitor/monitor-opentelemetry-exporter/samples/) folder.
 
 ## Key concepts
 
@@ -111,7 +131,7 @@ If you cannot your library in the registry, feel free to suggest a new plugin re
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/monitor-opentelemetry-exporter_1.0.0-beta.8/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js/sdk/monitor/monitor-opentelemetry-exporter/README.png)
 
