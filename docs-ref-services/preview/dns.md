@@ -1,17 +1,17 @@
 ---
-title: Azure DNS modules for JavaScript
-description: Reference for Azure DNS modules for JavaScript
-author: KumudD
-ms.author: kumud
-manager: jeconnoc
-ms.date: 07/18/2017
 ms.topic: reference
-ms.prod: azure
+title: Azure Dns SDK for JavaScript
+author: xirzec
+ms.devlang: javascript
+ms.data: 09/16/2022
+description: Reference for Azure Dns SDK for JavaScript
+ms.service: dns
+ms.author: jeffish
+ms.date: 07/18/2017
 ms.technology: azure
-ms.devlang: nodejs
-ms.service: DNS
+ms.prod: azure
+manager: jeconnoc
 ---
-
 # Azure DNS modules for JavaScript
 
 Use Azure DNS to host your Domain Name System (DNS) domains in Azure. Manage your DNS records using the same credentials and billing and support contract as your other Azure services. Seamlessly integrate Azure-based services with corresponding DNS updates and streamline your end-to-end deployment process.

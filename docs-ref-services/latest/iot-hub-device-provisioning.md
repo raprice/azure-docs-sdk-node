@@ -1,12 +1,12 @@
 ---
-ms.data: 09/15/2022
 ms.topic: reference
-ms.author: jeffish
 title: Azure IoT Hub Device Provisioning SDK for JavaScript
-ms.service: iothubdeviceprovisioning
 author: xirzec
-description: Reference for Azure IoT Hub Device Provisioning SDK for JavaScript
 ms.devlang: javascript
+ms.data: 09/16/2022
+description: Reference for Azure IoT Hub Device Provisioning SDK for JavaScript
+ms.service: iothubdeviceprovisioning
+ms.author: jeffish
 ---
 # Azure IoT Hub Device Provisioning SDK for JavaScript - latest
 
