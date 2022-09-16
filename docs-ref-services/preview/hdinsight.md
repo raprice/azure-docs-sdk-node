@@ -1,15 +1,15 @@
 ---
-title: Azure HDInsight Modules for JavaScript
-description: Reference for Azure HDInsight Modules for JavaScript
+description: Reference for Azure HDInsight SDK for JavaScript
+title: Azure HDInsight SDK for JavaScript
+ms.devlang: javascript
+author: xirzec
 ms.service: hdinsight
-author: jasonwhowell
-ms.author: jasonh
-manager: kfile
+ms.author: jeffish
 ms.topic: reference
-ms.devlang: nodejs
+ms.data: 09/15/2022
 ms.date: 07/18/2017
+manager: kfile
 ---
-
 # Azure HDInsight Modules for JavaScript
 
 Azure HDInsight is a cloud distribution of the Hadoop components from the Hortonworks Data Platform (HDP). Apache Hadoop was the original open-source framework for distributed processing and analysis of big data sets on clusters of computers.

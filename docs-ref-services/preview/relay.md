@@ -1,17 +1,17 @@
 ---
-title: Azure Relay modules for JavaScript
-description: Reference for Azure Relay modules for JavaScript
-author: sethmanheim
-ms.author: sethm
-manager: timlt
-ms.date: 07/18/2017
+description: Reference for Azure Relay SDK for JavaScript
+title: Azure Relay SDK for JavaScript
+ms.devlang: javascript
+author: xirzec
+ms.service: relay
+ms.author: jeffish
 ms.topic: reference
+ms.data: 09/15/2022
 ms.prod: azure
+ms.date: 07/18/2017
 ms.technology: azure
-ms.devlang: nodejs
-ms.service: Relay
+manager: timlt
 ---
-
 # Azure Relay modules for JavaScript
 
 The Azure Relay service creates hybrid applications by enabling you to securely expose services that reside within a corporate enterprise network to the public cloud, without having to open a firewall connection, or require intrusive changes to a corporate network infrastructure. Relay supports a variety of different transport protocols and web services standards.
