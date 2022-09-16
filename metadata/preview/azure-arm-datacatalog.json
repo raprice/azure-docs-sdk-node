@@ -1,0 +1,14 @@
+{
+  "Name": "@azure/arm-datacatalog",
+  "Version": "4.0.0-alpha.20220908.1",
+  "DevVersion": "4.0.0-alpha.20220916.1",
+  "DirectoryPath": "sdk/datacatalog/arm-datacatalog",
+  "ServiceDirectory": "datacatalog",
+  "ReadMePath": "sdk/datacatalog/arm-datacatalog/README.md",
+  "ChangeLogPath": "sdk/datacatalog/arm-datacatalog/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "mgmt",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-arm-datacatalog",
+  "ReleaseStatus": "2022-04-19"
+}
