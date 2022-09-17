@@ -1,0 +1,14 @@
+{
+  "Name": "@azure/arm-relay",
+  "Version": "3.1.0-alpha.20220907.1",
+  "DevVersion": "3.1.0-alpha.20220916.1",
+  "DirectoryPath": "sdk/relay/arm-relay",
+  "ServiceDirectory": "relay",
+  "ReadMePath": "sdk/relay/arm-relay/README.md",
+  "ChangeLogPath": "sdk/relay/arm-relay/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "mgmt",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-arm-relay",
+  "ReleaseStatus": "2022-07-08"
+}
