@@ -1,17 +1,14 @@
 ---
 title: Azure Web PubSub service client library for JavaScript
-keywords: Azure, javascript, SDK, API, @azure/web-pubsub, webpubsub
-author: maggiepint
-ms.author: magpint
-ms.date: 11/10/2021
+keywords: Azure, javascript, SDK, API, @azure/web-pubsub, web-pubsub
+author: vicancy
+ms.author: lianwei
+ms.date: 09/17/2022
 ms.topic: reference
-ms.prod: azure
-ms.technology: azure
 ms.devlang: javascript
-ms.service: webpubsub
+ms.service: web-pubsub
 ---
-
-# Azure Web PubSub service client library for JavaScript - version 1.0.0-beta.4 
+# Azure Web PubSub service client library for JavaScript - version 1.1.0-alpha.20220722.1 
 
 
 [Azure Web PubSub service](https://aka.ms/awps/doc) is an Azure-managed service that helps developers easily build web applications with real-time features and publish-subscribe pattern. Any scenario that requires real-time publish-subscribe messaging between server and clients or among clients can use Azure Web PubSub service. Traditional real-time features that often require polling from server or submitting HTTP requests can also use Azure Web PubSub service.
@@ -28,7 +25,7 @@ You can use this library in your app server side to manage the WebSocket client 
 
 Details about the terms used here are described in [Key concepts](#key-concepts) section.
 
-[Source code](https://github.com/Azure/azure-sdk-for-js/blob/@azure/web-pubsub_1.0.0-beta.4/sdk/web-pubsub/web-pubsub) |
+[Source code](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/web-pubsub/web-pubsub) |
 [Package (NPM)](https://www.npmjs.com/package/@azure/web-pubsub) |
 [API reference documentation](https://aka.ms/awps/sdk/js) |
 [Product documentation](https://aka.ms/awps/doc) |
@@ -72,7 +69,7 @@ Or authenticate the `WebPubSubServiceClient` using [Azure Active Directory][aad_
 
 1. Install the `@azure/identity` dependency
 
-```batch
+```bash
 npm install @azure/identity
 ```
 
@@ -80,6 +77,7 @@ npm install @azure/identity
 
 ```js
 const { WebPubSubServiceClient, AzureKeyCredential } = require("@azure/web-pubsub");
+const { DefaultAzureCredential } = require("@azure/identity");
 
 const key = new DefaultAzureCredential();
 const serviceClient = new WebPubSubServiceClient("<Endpoint>", key, "<hubName>");
@@ -206,7 +204,7 @@ const hasConnections = await serviceClient.groupExists("<groupName>");
 ```js
 const { WebPubSubServiceClient } = require("@azure/web-pubsub");
 
-function onResponse(rawResponse: FullOperationResponse): void {
+function onResponse(rawResponse) {
   console.log(rawResponse);
 }
 const serviceClient = new WebPubSubServiceClient("<ConnectionString>", "<hubName>");
@@ -225,7 +223,7 @@ You can set the following environment variable to get the debug logs when using 
 export AZURE_LOG_LEVEL=verbose
 ```
 
-For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/@azure/web-pubsub_1.0.0-beta.4/sdk/core/logger).
+For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/core/logger).
 
 ### Live Trace
 
@@ -239,13 +237,13 @@ directory for detailed examples on how to use this library.
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/web-pubsub_1.0.0-beta.4/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ## Related projects
 
 - [Microsoft Azure SDK for Javascript](https://github.com/Azure/azure-sdk-for-js)
 
 [azure_sub]: https://azure.microsoft.com/free/
-[samples_ref]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/web-pubsub_1.0.0-beta.4/sdk/web-pubsub/web-pubsub/samples
+[samples_ref]: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/web-pubsub/web-pubsub/samples
 [aad_doc]: https://aka.ms/awps/aad
 
