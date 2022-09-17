@@ -1,0 +1,14 @@
+{
+  "Name": "@azure/arm-recoveryservices-siterecovery",
+  "Version": "4.0.0-alpha.20220907.1",
+  "DevVersion": "4.0.0-alpha.20220916.1",
+  "DirectoryPath": "sdk/recoveryservicessiterecovery/arm-recoveryservices-siterecovery",
+  "ServiceDirectory": "recoveryservicessiterecovery",
+  "ReadMePath": "sdk/recoveryservicessiterecovery/arm-recoveryservices-siterecovery/README.md",
+  "ChangeLogPath": "sdk/recoveryservicessiterecovery/arm-recoveryservices-siterecovery/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "mgmt",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-arm-recoveryservices-siterecovery",
+  "ReleaseStatus": "2022-01-20"
+}
