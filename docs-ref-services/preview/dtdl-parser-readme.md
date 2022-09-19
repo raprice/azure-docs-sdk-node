@@ -3,30 +3,28 @@ title: Azure Model Parser client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/dtdl-parser, digitaltwins
 author: johngallardo
 ms.author: jgalla
-ms.date: 02/23/2022
+ms.date: 09/19/2022
 ms.topic: reference
-ms.prod: azure
-ms.technology: azure
 ms.devlang: javascript
 ms.service: digitaltwins
 ---
-# Azure Model Parser client library for JavaScript - version 1.0.0-beta.2 
+# Azure Model Parser client library for JavaScript - version 1.0.0-alpha.20220919.1 
 
 
 Use this library to parse your DTDL models and validate their structure conforms to the DTDL specification.
 
 The Digital Twin Definition Language (DTDL) defines a JSON-LD based schema for creating Digital Twin models. As the DTDL specification evolves, this parser will be updated accordingly. A key characteristic of Azure Digital Twins is the ability to define your own vocabulary and build your twin graph in the self-defined terms of your business. This capability is provided through user-provided models. You can think of models as the nouns in a description of your world.
 
-Learn more about DTDL [here](https://docs.microsoft.com/azure/digital-twins/concepts-models).
+Learn more about DTDL [here](/azure/digital-twins/concepts-models).
 
 ## Getting started
 
 ### Currently supported environments
 
-- [LTS versions of Node.js](https://nodejs.org/about/releases/)
+- [LTS versions of Node.js](https://github.com/nodejs/release#release-schedule)
 - Latest versions of Safari, Chrome, Edge, and Firefox.
 
-See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/@azure/dtdl-parser_1.0.0-beta.2/SUPPORT.md) for more details.
+See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/main/SUPPORT.md) for more details.
 
 ### Prerequisites
 
@@ -56,7 +54,7 @@ To use this client library in the browser, first you need to use a bundler. For 
 
 DTDL (Digital Twins Definition Language) defines a contract for interacting with models of Digital Twin Plug and Plan devices. The DTDL Parser is a langauge parser that is partially hand-written, partially generated based on a DTDL schema definition, which can validate if a string provided to it conforms to DTDL langauge definitions.
 
-You can learn more about DTDL for models by reading "Learn about twin models and how to define them in (Azure Digital Twins](https://docs.microsoft.com/azure/digital-twins/concepts-models)
+You can learn more about DTDL for models by reading "Learn about twin models and how to define them in (Azure Digital Twins](/azure/digital-twins/concepts-models)
 
 ## Examples
 
@@ -73,9 +71,9 @@ async function main() {
 
   const modelParser = createParser(ModelParsingOption.PermitAnyTopLevelElement);
   modelParser.options = ModelParsingOption.PermitAnyTopLevelElement;
-  Object.entries(models).forEach(([key, value]) => {
+  Object.entries(models).forEach(async ([key, value]) => {
     console.log(`dtmi: ${key}`);
-    const modelDict = await modelParser.parse([value]);
+    const modelDict = await modelParser.parse([JSON.stringify(value)]);
     Object.entries(modelDict).forEach(([key2, value2]) => {
       console.log(key2);
     });
@@ -101,15 +99,15 @@ import { setLogLevel } from "@azure/logger";
 setLogLevel("info");
 ```
 
-For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/@azure/dtdl-parser_1.0.0-beta.2/sdk/core/logger).
+For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/core/logger).
 
 ## Next steps
 
-Please take a look at the [samples](https://github.com/Azure/azure-sdk-for-js/tree/@azure/dtdl-parser_1.0.0-beta.2/sdk/digitaltwins/dtdl-parser/samples) directory for detailed examples that demonstrate how to use the client libraries.
+Please take a look at the [samples](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/digitaltwins/dtdl-parser/samples) directory for detailed examples that demonstrate how to use the client libraries.
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/dtdl-parser_1.0.0-beta.2/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/master/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ## Related projects
 
@@ -117,6 +115,6 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Ftemplate%2Ftemplate%2FREADME.png)
 
-[azure_cli]: https://docs.microsoft.com/cli/azure
+[azure_cli]: /cli/azure
 [azure_sub]: https://azure.microsoft.com/free/
 
